@@ -19,32 +19,40 @@ In this lab I have setup a SIEM using Azure Sentinel and Azure virtual machines.
 <h2>Lab walk-through:</h2>
 
 <p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Creating Network Security Group for Honeypot Virtual Machine: <br/>
+<img src="https://i.imgur.com/El0I2O1.png" height="80%" width="80%" alt="NSG Creation"/>
 <br />
 <br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Creating Custom Log using Log Analytics Workspace to pull "Failed RDP" requests from VM:  <br/>
+<img src="https://i.imgur.com/b9L1YzR.png" height="80%" width="80%" alt="Log Creation"/>
 <br />
 <br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Configuring Network Security Group to Allow any and all traffic: <br/>
+<img src="https://i.imgur.com/7H6lZ1s.png" height="80%" width="80%" alt="Allow All"/>
 <br />
 <br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Removing Firewall from Virtual Machine:  <br/>
+<img src="https://i.imgur.com/kX39Ct8.png" height="80%" width="80%" alt="Remove Firewall"/>
 <br />
 <br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Powershell Script to export logs from the Virtual Machine:  <br/>
+<img src="https://i.imgur.com/qPqhBj8.png" height="80%" width="80%" alt="Powershell script"/>
 <br />
 <br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Virtual Machnine Logs being pulled using Azure Logs:  <br/>
+<img src="https://i.imgur.com/ryX5j8Q.png" height="80%" width="80%" alt="Log Pulls"/>
 <br />
 <br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Using a script to extract the raw data from the logs:  <br/>
+<img src="https://i.imgur.com/kqqLZLY.png" height="80%" width="80%" alt="Raw Data"/>
+ <br />
+ <br />
+Creating workbook in Azure Sentinel to create a world map:  <br/>
+<img src="https://i.imgur.com/mJ1M6Au.png" height="80%" width="80%" alt="Workbook"/>
+<br />
+<br />
+World Map Showing All Failed Login Attempts From Around the World Using IP Geolocator:  <br/>
+<img src="https://i.imgur.com/wLy7dIj.png" height="80%" width="80%" alt="Failed Login Map"/>
 </p>
 
 <!--
